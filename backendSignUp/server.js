@@ -7,7 +7,7 @@ const db = mysql.createPool({
   host: 'designloginsignup.cpwygia6ohc6.ap-southeast-2.rds.amazonaws.com',
   user: 'admin',
   password: '7C&2Fp9*Lx',
-  database: 'DESIGNLogin',
+  database: 'DESIGNLoginSignUp',
   port: 3306,
 });
 
@@ -18,7 +18,7 @@ app.use(cors());
 
 // Route to fetch data from the database
 app.get('/data', (req, res) => {
-  const sql = 'SELECT * FROM Users'; // Query to fetch all data from the Users table
+  const sql = 'SELECT * FROM UsersSignUp'; // Query to fetch all data from the Users table
   db.query(sql, (err, result) => {
     if (err) {
       res.status(500).json({ message: 'An error occurred while processing your request.' });
@@ -31,7 +31,7 @@ app.get('/data', (req, res) => {
 // Route to handle login requests
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
-  const sql = 'SELECT * FROM Users WHERE username = ? AND password = ?';
+  const sql = 'SELECT * FROM UsersSignUp WHERE username = ? AND password = ?';
   db.query(sql, [username, password], (err, result) => {
     if (err) {
       res.status(500).json({ message: 'An error occurred while processing your request.' });
@@ -48,7 +48,7 @@ app.post('/login', (req, res) => {
 // Route to handle sign-up requests
 app.post('/signup', (req, res) => {
   const { username, password } = req.body;
-  const sql = 'INSERT INTO Users (username, password) VALUES (?, ?)';
+  const sql = 'INSERT INTO UsersSignUp (username, password) VALUES (?, ?)';
   db.query(sql, [username, password], (err, result) => {
     if (err) {
       res.status(500).json({ message: 'An error occurred while processing your request.' });
