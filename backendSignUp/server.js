@@ -7,7 +7,7 @@ const db = mysql.createPool({
   host: 'designloginsignup.cpwygia6ohc6.ap-southeast-2.rds.amazonaws.com',
   user: 'admin',
   password: '7C&2Fp9*Lx',
-  database: 'designloginsignup',
+  database: 'DESIGNLoginSignUp',
   port: 3306,
 });
 
