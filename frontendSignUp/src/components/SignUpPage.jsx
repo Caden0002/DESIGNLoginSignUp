@@ -19,7 +19,7 @@ function SignUpPage(props) {
             setErrorMessage('');
 
             // Send sign-up request to server
-            const response = await axios.post('https://designlogin.onrender.com/signup', { username, password });
+            const response = await axios.post('https://designloginsignup.onrender.com/signup', { username, password });
 
             // If sign-up successful, redirect to LoginPage
             if (response.status === 200) {
