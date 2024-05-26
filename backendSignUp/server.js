@@ -8,7 +8,7 @@ const db = mysql.createPool({
   user: 'admin',
   password: '7C&2Fp9*Lx',
   database: 'designloginsignup',
-  port: 3306,git add . && git commit -m “change_table” && git push origin main
+  port: 3306,
 });
 
 const app = express();
