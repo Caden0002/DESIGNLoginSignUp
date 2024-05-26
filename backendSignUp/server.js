@@ -7,8 +7,8 @@ const db = mysql.createPool({
   host: 'designloginsignup.cpwygia6ohc6.ap-southeast-2.rds.amazonaws.com',
   user: 'admin',
   password: '7C&2Fp9*Lx',
-  database: 'DESIGNLoginSignUp',
-  port: 3306,
+  database: 'designloginsignup',
+  port: 3306,git add . && git commit -m “change_table” && git push origin main
 });
 
 const app = express();
