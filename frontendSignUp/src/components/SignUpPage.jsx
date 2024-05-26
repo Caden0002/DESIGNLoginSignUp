@@ -29,7 +29,7 @@ function SignUpPage(props) {
             console.error('Error:', error);
 
             // If sign-up failed, display error message
-            setErrorMessage('Error occurred while signing up. Please try again.');
+            setErrorMessage('Error occurred while signing up.\nPlease try again.');
         }
     };
 
@@ -65,7 +65,7 @@ function SignUpPage(props) {
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Sign Up</button>
-                    {errorMessage && <p className="text-red-500 text-sm whitespace-pre-line text-center mt-4 ">{errorMessage}</p>} {/* Display error message if exists */}
+                    {errorMessage && <p className="text-red-500 text-sm whitespace-pre-line text-center mt-4 whitespace-pre-line">{errorMessage}</p>} {/* Display error message if exists */}
                 </form>
                 {/* Back button */}
                 <button onClick={handleBackClick} className="w-full mt-4 bg-gray-300 text-gray-800 py-2 rounded-md hover:bg-gray-400">Back to Login</button>
