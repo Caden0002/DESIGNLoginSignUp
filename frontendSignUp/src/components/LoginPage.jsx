@@ -44,7 +44,7 @@ const handlePasswordDataClick = async () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">
-     <p className="text-gray-600 mb-4 w-96 absolute bottom-4 right-4 whitespace-pre-line">{instruction}</p>
+     <p className="text-gray-600 mb-12 sm:mb-4 w-96 sm:absolute sm:bottom-4 sm:right-4 whitespace-pre-line text-xs sm:text-base">{instruction}</p>
 
             <div className="mx-auto p-6 bg-white rounded-md shadow-md">
         
